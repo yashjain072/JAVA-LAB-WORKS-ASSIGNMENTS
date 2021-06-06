@@ -7,11 +7,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-
-/**
- *
- * @author hardik
- */
 public class filterExample2 implements Filter {
 String permission;
  
