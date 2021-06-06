@@ -1,0 +1,26 @@
+package firstsql;
+import java.sql.*;
+public class Firstsql {
+
+   
+    public static void main(String[] args) {
+         String url="jdbc:mysql://localhost:8667/java"; 
+                 String user="root";
+                 String pass="root";
+         try
+         {
+             Class.forName("com.mysql.cj.jdbc.Driver");
+             Connection con=DriverManager.getConnection(url,user,pass);
+             PreparedStatement ps=con.prepareStatement("insert into student value(?,?,?,?,?)");
+             ps.setInt(1,250);
+             ps.setString(2,"Raj");
+             ps.setString(3,"IT");
+             ps.setInt(4,5);
+             ps.executeUpdate();
+             System.out.println("coneection successfully");
+             
+         }
+         catch(Exception e){System.out.println(e);}
+    }
+    
+}
